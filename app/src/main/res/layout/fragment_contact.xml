@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ContactFragment">
 
-    <Button
-        android:id="@+id/btn"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutContact">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ziviello.navigationx.contact.ContactViewModel" />
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="BACK HOME" />
+        tools:context=".ContactFragment">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{(v) -> viewModel.clickHome()}"
+            android:text="BACK HOME" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

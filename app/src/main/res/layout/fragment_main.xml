@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainFragment">
+
+<layout
+    android:id="@+id/layoutMainFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ziviello.navigationx.home.HomeViewModel" />
+    </data>
 
 
-    <Button
-        android:id="@+id/btn"
+    <android.support.constraint.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="SEGUE CONTATTI" />
-</FrameLayout>
+        tools:context=".home.HomeFragment">
+
+        <Button
+            android:id="@+id/btnContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{(v) -> viewModel.clickContact()}"
+            android:text="SEGUE CONTATTI" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

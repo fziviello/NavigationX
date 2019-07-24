@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.ziviello.navigationx.MainFragment"
+        android:name="com.ziviello.navigationx.home.HomeFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/contactFragment"
-        android:name="com.ziviello.navigationx.ContactFragment"
+        android:name="com.ziviello.navigationx.contact.ContactFragment"
         android:label="fragment_contact"
         tools:layout="@layout/fragment_contact" />
 </navigation>
